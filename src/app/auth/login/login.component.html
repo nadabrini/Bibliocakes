@@ -1,0 +1,45 @@
+<router-outlet></router-outlet>
+<router-outlet></router-outlet>
+<nav class="navbar navbar-expand-md navbar-light "style="background-color:#FDEAE4;"aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" style="font-family: Georgia, serif"><b>LOGIN</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+           <a routerLink="/home"><button type="button" class="btn btn-outline-defaul" routerLink='/home'><b>Accueil</b></button></a>
+          </li>
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6">
+    <form style="margin: 50px;">
+        <div class="form-group">
+            <label for="login">Login</label>
+            <input type="text" name="login" id="login" class="form-control" #login>
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="mdp" class="form-control" #mdp>
+        </div>
+        <button type="submit" class="btn btn-success" (click)="loginn(login.value,mdp.value)"><b>Valider</b></button>
+    </form>
+        </div>
+    </div>
+</div>
+<!--
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add a book</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+-->

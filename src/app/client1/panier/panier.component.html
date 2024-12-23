@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-md navbar-light "style="background-color:#FDEAE4;"aria-label="Fourth navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand"><b>BiblioCakes</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarsExample04">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-default" routerLink="/home"><b>Accueil</b></button>
+          </li>
+          <li class="nav-item">
+            <button type="button" class="btn btn-outline-default" style="position:absolute;left:90%;"><b>Se connecter</b></button>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle"  id="dropdown04" data-bs-toggle="dropdown" class="btn btn-outline-default" aria-expanded="false"><b>Nos choix</b></a>
+            <ul class="dropdown-menu" aria-labelledby="dropdown04">
+              <li><a class="dropdown-item" routerLink="/sucres"><b>Nos Sucrés</b></a></li>
+              <li><a class="dropdown-item" routerLink="/sales"><b>Nos Salés</b></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+<div class="container mb-5 mt-5">
+    <div class="row">
+      <p><strong>Total: {{total}}DT</strong></p>
+        <div class="col-md-4" *ngFor="let t of tabPanier">
+            <div class="card mt-3">
+                <div class="product-1 align-items-center p-2 text-center"> <img [src]="t.img" class="rounded" width="160">
+                    <h5>{{t.name}}</h5>
+                    <div class="mt-3 info"> <span class="text1 d-block">{{t.description}} </span> </div>
+                    <div class=" cost mt-3 text-dark"> <span>{{t.prix}} DT</span>
+                        <div class=" star mt-3 align-items-center"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                    </div>
+                </div>
+                <div class="p-3 bg-danger text-center text-white mt-3 cursor"> <button class="btn btn-danger" (click)="suppPanier(t)" >Supprimer de panier</button> </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
